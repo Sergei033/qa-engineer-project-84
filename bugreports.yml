@@ -1,0 +1,38 @@
+---
+- summary: |
+    Кнопка "В корзину" выходит за рамки карточки товара(screen1.png)
+  environment: |
+    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    OC Windows 10
+  steps-to-reproduce: >
+    1. Зайти на сайт https://hexlet-products-store.vercel.app/
+    2. Нажать на кнопку " Следующая страница" и пролистать до категорий "sunglasses","automotive", "motorcycle", "lighting"
+    3. Выбрать категорию "automotive"
+  expected-result: |
+    Кнопка "В корзину" должна быть в карточке товара
+  actual-result: |
+    Кнопка "В корзину" находится за пределами карточки товара
+- summary: |
+    В категории "Язык", иконка языка "English" не грузится(screen2.png)
+  environment: |
+    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    OC Windows 10
+  steps-to-reproduce: |
+    1. Зайти на сайт https://hexlet-products-store.vercel.app/
+    2. Нажать на "Язык" 
+  expected-result: |
+    Иконка рядом с "English" должна отображаться
+  actual-result: |
+    Иконка рядом с "English" не грузится  
+- summary: |
+    В поле цена можно прописывать отрицательное значение(screen3)
+  environment: |
+    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    OC Windows 10
+  steps-to-reproduce: |
+    1. Зайти на сайт https://hexlet-products-store.vercel.app/
+    2. Попробовать поставить отрицательное значение в поле "Цена"
+  expected-result: |
+    В полях "Цена" должно прописываться только положительные значения
+  actual-result: |
+    В полях "Цена" можно прописывать отрицательные значения 
