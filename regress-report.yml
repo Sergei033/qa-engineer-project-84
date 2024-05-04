@@ -1,0 +1,78 @@
+---
+test-cases:
+- summary: |
+    Успешное добавление товара в корзину
+  status: pass
+
+  - summary: |
+    Успешное добавление нескольких товаров в корзину
+  status: pass
+
+  - summary: |
+    Успешное оформление заказа
+  status: pass
+
+  - summary: |
+    Успешное добавление товара в корзину через карточку товара
+  status: pass
+
+  - summary: |
+    Успешная очистка корзины
+  status: fail
+  
+  bugreports:
+
+    - summary: |
+      Автоматическая смена языка при обновлении страницы  
+    environment: |
+      Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
+      OC Windows 10
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать на "Language"
+      3. В окне выбора языка сменить на "Russian"
+      4. Обновить страницу
+    expected-result: |
+      Настройка языка не должна сбрасываться 
+    actual-result: |
+      Настройка языка сменилась на "English"
+
+    - summary: |
+      Во вкладке "Категория" не отображается первая категория(screen4.png)
+    environment: |
+      Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
+      OC Windows 10
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать на кнопку "Категория"
+    expected-result: |
+      Первая строчка во вкладке "Категория" должна отображаться
+    actual-result: |
+      Нет отображения первой строчки во вкладке "Категория"
+  
+    - summary: |
+      В корзине не работает кнопка "Очистить корзину"
+    environment: |
+      Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
+      OC Windows 10
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать на кнопку "Корзина"
+      3. Нажать на кнопку "Очистить корзину"
+      4. Обновить вкладку 
+    expected-result: |
+      Корзина должна очиститься 
+    actual-result: |
+      В корзине остаются добавленные товары 
+    - summary: |
+      На карточках товара, в английской версии сайта, кнопка "Add to cart" выходит за рамки карточки товара
+    environment: |
+      Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
+      OC Windows 10
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В категории выбрать "Golden" или "Saaf&Khaas(screen5.png и screen6.png)
+    expected-result: |
+      Кнопка "Add to cart" должна быть внутри границ карточки товара
+    actual-result: |
+      Кнопка "Add to cart" находится вне карточки товара 

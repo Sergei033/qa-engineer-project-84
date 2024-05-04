@@ -2,7 +2,7 @@
 - summary: |
     Кнопка "В корзину" выходит за рамки карточки товара(screen1.png)
   environment: |
-    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
     OC Windows 10
   steps-to-reproduce: >
     1. Зайти на сайт https://hexlet-products-store.vercel.app/
@@ -15,7 +15,7 @@
 - summary: |
     В категории "Язык", иконка языка "English" не грузится(screen2.png)
   environment: |
-    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
     OC Windows 10
   steps-to-reproduce: |
     1. Зайти на сайт https://hexlet-products-store.vercel.app/
@@ -27,7 +27,7 @@
 - summary: |
     В поле цена можно прописывать отрицательное значение(screen3)
   environment: |
-    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
     OC Windows 10
   steps-to-reproduce: |
     1. Зайти на сайт https://hexlet-products-store.vercel.app/
