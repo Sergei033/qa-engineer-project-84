@@ -1,24 +1,55 @@
 ---
 test-cases:
   - summary: |
-      Успешное добавление товара в корзину
+      Добавление товара в корзину
     status: pass
 
   - summary: |
-      Успешное добавление нескольких товаров в корзину
+      Добавление нескольких товаров в корзину
     status: pass
 
   - summary: |
-      Успешное оформление заказа
+      Оформление заказа
     status: pass
 
   - summary: |
-      Успешное добавление товара в корзину через карточку товара
+      Добавление товара в корзину через карточку товара
     status: pass
 
   - summary: |
       Успешная очистка корзины
     status: fail
+
+  - summary: |
+      Переключение языка на русский
+    status: fail
+
+  - summary: |
+      Проверка сортировки товара по категориям 
+    status: pass
+    
+  - summary: |
+      Проверка поиска товара по производителю
+    status: pass
+
+  - summary: |
+      Проверка открытия карточки товара 
+    status: pass
+    
+  - summary: |
+      Проверка сортировки товара по цене 
+    status: pass
+  
+  - summary: |
+      Проверка работы кнопок "Предыдущая" и "Следующая"
+    status: pass
+    
+  - summary: |
+      Проверка сохранения товара в корзине
+    status: fail
+
+
+
   
 bugreports:
 
@@ -28,10 +59,9 @@ bugreports:
       Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
       OC Windows 10
     steps-to-reproduce: |
-      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Нажать на "Language"
-      3. В окне выбора языка сменить на "Russian"
-      4. Обновить страницу
+      1. Нажать на "Language"
+      2. В окне выбора языка сменить на "Russian"
+      3. Обновить страницу
     expected-result: |
       Настройка языка не должна сбрасываться 
     actual-result: |
@@ -43,8 +73,7 @@ bugreports:
       Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
       OC Windows 10
     steps-to-reproduce: |
-      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Нажать на кнопку "Категория"
+      1. Нажать на кнопку "Категория"
     expected-result: |
       Первая строчка во вкладке "Категория" должна отображаться
     actual-result: |
@@ -56,10 +85,9 @@ bugreports:
       Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
       OC Windows 10
     steps-to-reproduce: |
-      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Нажать на кнопку "Корзина"
-      3. Нажать на кнопку "Очистить корзину"
-      4. Обновить вкладку 
+      1. Нажать на кнопку "Корзина"
+      2. Нажать на кнопку "Очистить корзину"
+      3. Обновить вкладку 
     expected-result: |
       Корзина должна очиститься 
     actual-result: |
@@ -71,8 +99,7 @@ bugreports:
       Google Chrome   91.103.249.243 (Официальная сборка) (64 бит)
       OC Windows 10
     steps-to-reproduce: |
-      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. В категории выбрать "Golden" или "Saaf&Khaas(screen5.png и screen6.png)
+      1. В категории выбрать "Golden" или "Saaf&Khaas(screen5.png и screen6.png)
     expected-result: |
       Кнопка "Add to cart" должна быть внутри границ карточки товара
     actual-result: |
